@@ -2,133 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitação de Tonner Fribal</title>
-
-    <link rel ="stylesheet" href="style.css"> <!-- Aqui integramos o nosso CSS -->
+    <!-- Link do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
-<header class="cabecalho">
-    <h1 class="logo" >Logo</h1></a>
 <body>
 
-    
-    <!-- Abaixo fizemos um link sheetmonkey e usamos o excel como base de dados para salvar os form -->
-<form action ="https://api.sheetmonkey.io/form/9tPARAHUiEuFgvzMQJnvaF" method="post"      
-    <div class="campo">
-
-        
-
-        <h1 id="titulo">Solicitação de Tonner Fribal</h1>
-        <p class="info1"> Rio Grande Comercio de Carnes LTDA  - CNPJ: 07.555.950/0010-12 <br>
-            BR010 Frigorifico Fribal - Coco Grande - CEP: 65909-170 - IMPERATRIZ - MA      </p>
-        <p id="subtitulo">Complete a requisição</p>
-        
-    </br>
+<!-- Cabeçalho com Bootstrap -->
+<header class="custom-gradient text-white text-center py-3">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <h1 class="mb-0">Fribal</h1>
     </div>
-    <form>
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="nome"><strong>Nome</strong> </label>
-                <input type="text" name="name" id="name" required>
+</header>
+<style>
+    .custom-gradient {
+        background: linear-gradient(90deg, #e24a57, #363131);
+    }
+</style>
+
+
+<!-- Formulário -->
+<div class="container my-4">
+    <form action="https://api.sheetmonkey.io/form/9tPARAHUiEuFgvzMQJnvaF" method="post" class="bg-light p-4 rounded shadow">
+        <h1 class="text-center mb-4">Solicitação de Tonner Fribal</h1>
+        <p class="text-center">
+            Rio Grande Comércio de Carnes LTDA - CNPJ: 07.555.950/0010-12<br>
+            BR010 Frigorífico Fribal - Coco Grande - CEP: 65909-170 - Imperatriz - MA
+        </p>
+        <p class="text-center mb-4">Complete a requisição</p>
+
+        <div class="mb-3">
+            <label for="name" class="form-label"><strong>Nome</strong></label>
+            <input type="text" class="form-control" name="name" id="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="setor" class="form-label"><strong>Setor</strong></label>
+            <input type="text" class="form-control" name="setor" id="setor" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="date" class="form-label"><strong>Data</strong></label>
+            <input type="date" class="form-control" name="Data" id="date" required>
+        </div>
+
+        <fieldset class="mb-3">
+            <legend><strong>Selecione a Área</strong></legend>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="Área" value="Indústria" id="industria">
+                <label for="industria" class="form-check-label">Indústria</label>
             </div>
-
-            <div class="campo">
-                <label for="setor"><strong>Setor</strong></label>
-                <input type="text" name="setor" id="setor" required>
-
-                <div class="data">
-                    <label for="data"><strong>Data</strong></label> 
-                    <input type="date" name="Data" id="date" required>
-                    
-                    <label><strong>Selecione a Área:</strong> </label>
-                    <label>
-                        <input type="radio" name="Área" value="Indústria">Indústria
-                </label>
-                <label>
-                    <input type="radio" name="Área" value="Administrativo">Administrativo
-            </label>
-
-            <label>
-                <input type="radio" name="Área" value="Frota">Frota
-        </label>
-
-        <label>
-            <input type="radio" name="Área" value="CFSO">CFSO
-    </label>
-
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="Área" value="Administrativo" id="administrativo">
+                <label for="administrativo" class="form-check-label">Administrativo</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="Área" value="Frota" id="frota">
+                <label for="frota" class="form-check-label">Frota</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="Área" value="CFSO" id="cfso">
+                <label for="cfso" class="form-check-label">CFSO</label>
             </div>
         </fieldset>
 
-        <div class="campo">
-
-            <label for="marca"><strong>Marca da Impressora</strong></label>
-            <input type="text" name="marca da Impressora" id="marca" required>
-
+        <div class="mb-3">
+            <label for="marca" class="form-label"><strong>Marca da Impressora</strong></label>
+            <input type="text" class="form-control" name="marca" id="marca" required>
         </div>
 
-       <div class="cmapo"> 
+        <fieldset class="mb-3">
+            <legend><strong>Selecione o tipo de recarga</strong></legend>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="Tipo de Recarga" value="Tinta-Pigmentada" id="pigmentada">
+                <label for="pigmentada" class="form-check-label">Tinta Pigmentada</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="Tipo de Recarga" value="Colorida" id="colorida">
+                <label for="colorida" class="form-check-label">Tinta Colorida</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="Tipo de Recarga" value="Tonner" id="tonner">
+                <label for="tonner" class="form-check-label">Tonner</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="Tipo de Recarga" value="Cilindro" id="cilindro">
+                <label for="cilindro" class="form-check-label">Cilindro</label>
+            </div>
+        </fieldset>
 
-        <label><strong>Selecione o tipo de recarga:</strong> </label>
-        <label>
-            <input type="radio" name="Tipo de Recarga" value="Tinta-Pigmentada">Tinta-Pigmentada
-        </label>
-        <label>
-            <input type="radio" name="Tipo de Recarga" value="Colorida">Tinta-Colorida
-        </label>
-        <label>
-            <input type="radio" name="Tipo de Recarga" value="tonner">Tonner
-        </label>
-
-        <input type="radio" name="Tipo de Recarga" value="Cilindro">Cilindro
-    </label>
-
-       </div>
-
-    <div class="campo">
-        <label for="prioridade">prioridade</label>
-        <select id="prioridade">
-            <option select disabled value="">Selecione</option>
-            <option>Baixa</option>
-            <option>Média</option>
-            <option>Alta</option> 
-        </select>
-
-
-    </div>       
-
-    <fieldset class="grupo">
-        <div class="campo">
-            <label><strong>Selecione o modelo do Tonnner ou tinta:</strong> </label><br><br>
-            <input type="checkbox" id="tonner1" name="Modelo" value="Tonner 85">
-            <label for="tonner85">Tonner 85</label>
-            <input type="checkbox" id="tonner2" name="Modelo" value="Tonner 83">
-            <label for="tonner83">Tonner 83</label>
-            <input type="checkbox" id="tonner3" name="Modelo" value="Tonner Brother">
-            <label for="tonnerBrtoher">Tonner Brother</label>
-            <input type="checkbox" id="tonner3" name="Modelo" value="Brother TN450">
-            <label for="tonnerBrtoher">TN450</label>
-            <input type="checkbox" id="tonner3" name="Modelo" value="Brother TN660">
-            <label for="tonnerBrtoher">TN660</label>
-            <input type="checkbox" id="tinta1" name="Modelo" value="Pigmentada">
-            <label for="pigmentada">Tinta Preta Epson</label>
-            <input type="checkbox" id="tinta2" name="Modelo" value="Colorida">
-            <label for="colorida">Tinta Colorida </label>
+        <div class="mb-3">
+            <label for="prioridade" class="form-label"><strong>Prioridade</strong></label>
+            <select id="prioridade" name="prioridade" class="form-select" required>
+                <option disabled selected value="">Selecione</option>
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
         </div>
-        <div class="campo">
-           
-            <button onclick="window.print()">Imprimir</button>     <!-- Comando para imprimir formulário  ou a página web -->
-        </div>
-    </fieldset>
-    <button class="botao" type="submit">Enviar Solicitação</button>   <!-- -->
 
+        <fieldset class="mb-3">
+            <legend><strong>Selecione o modelo do Tonner ou Tinta</strong></legend>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="Modelo" value="Tonner 85" id="tonner85">
+                <label for="tonner85" class="form-check-label">Tonner 85</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="Modelo" value="Tonner 83" id="tonner83">
+                <label for="tonner83" class="form-check-label">Tonner 83</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="Modelo" value="Brother TN450" id="tn450">
+                <label for="tn450" class="form-check-label">Brother TN450</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="Modelo" value="Pigmentada" id="pigmentada-tinta">
+                <label for="pigmentada-tinta" class="form-check-label">Tinta Preta Epson</label>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-success w-100">Enviar Solicitação</button>
     </form>
+</div>
 
-   
-    <!-- <button class="button" value="Print this page" onClick="window.print()">Imprimir </button>   -->
-   
-<!--<button onclick="window.print()">Imprimir</button>-->
-    
+<!-- Script do Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
